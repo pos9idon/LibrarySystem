@@ -1,0 +1,98 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    --foreground: 30 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 10% 15%;
+
+    --primary: 25 40% 35%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 210 40% 30%;
+    --secondary-foreground: 40 33% 98%;
+
+    --muted: 210 20% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 30 35% 60%;
+    --accent-foreground: 30 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 25 40% 35%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 30 10% 10%;
+    --foreground: 40 33% 98%;
+
+    --card: 30 10% 12%;
+    --card-foreground: 40 33% 98%;
+
+    --popover: 30 10% 12%;
+    --popover-foreground: 40 33% 98%;
+
+    --primary: 25 40% 45%;
+    --primary-foreground: 40 33% 98%;
+
+    --secondary: 210 40% 40%;
+    --secondary-foreground: 40 33% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 30 35% 50%;
+    --accent-foreground: 40 33% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 40 33% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 25 40% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.book-cover {
+  position: relative;
+  transition: transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.book-cover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.book-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: linear-gradient(to right, hsl(var(--primary)), rgba(0,0,0,0.1));
+}
